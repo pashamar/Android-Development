@@ -9,12 +9,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
+import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
     lateinit var mButton: AppCompatButton
     lateinit var Password: EditText
     lateinit var Email: EditText
     var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+[a-z]+"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +38,10 @@ class MainActivity : AppCompatActivity() {
                 if (Email.text.toString().trim() { it <= ' ' }.matches(emailPattern.toRegex()))
                     Toast.makeText(applicationContext, "valid email address", Toast.LENGTH_LONG)
                         .show()
+
             }else{
             Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_LONG).show()
-        }
+                }
 
             if (Password.text.toString().isEmpty()) {
                 Toast.makeText(applicationContext, "enter password", Toast.LENGTH_LONG).show()
@@ -57,13 +60,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun passwordValidate(text: String?): Boolean {
+        var p = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@\$!%*?&])[A-Za-z\\d@\$!%*?&]{5,20}\$")
+        var m = p.matcher(text)
+        return m.matches()
+    }
+
     fun checkEmail(emailSize: Int): Boolean {
         if (emailSize < 12 && emailSize > 5) {
             return true;
         } else {
             return false
         }
-
     }
 
 }
