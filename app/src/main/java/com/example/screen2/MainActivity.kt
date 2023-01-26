@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        mButton = findViewById(R.id.button);
-        Password = findViewById(R.id.password)
-        Email = findViewById(R.id.email)
+        setContentView(R.layout.fragment_first)
+        mButton = findViewById(R.id.fragment1_button)
+        Password = findViewById(R.id.fragment1_password)
+        Email = findViewById(R.id.fragment1_email)
         checkPassword(Password.text.toString().length)
         checkEmail(Email.text.toString().length)
 
