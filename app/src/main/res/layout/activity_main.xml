@@ -6,47 +6,9 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="25dp"
+    android:id="@+id/fragment_container"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="Registration"
-        android:textAlignment="center"
-        android:textColor="@color/medium_blue"
-        android:textSize="30dp" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@drawable/edit_text"
-        android:hint="email"
-        android:inputType="textWebEmailAddress"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:textColorHint="@color/black" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edit_text"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:textColorHint="@color/black" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button_back"
-        android:text="login"
-        android:textColor="@color/white" />
 
 </LinearLayout>

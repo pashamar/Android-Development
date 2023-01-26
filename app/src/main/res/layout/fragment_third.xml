@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThirdFragment"
+    android:gravity="center"
+    android:padding="25dp">
+
+
+    <TextView
+        android:id="@+id/fragment3_txt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/fragment3_txt5"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Your profile is confirmed!"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fragment3_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_back"
+        android:text="Back"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
